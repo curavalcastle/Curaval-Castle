@@ -1,24 +1,26 @@
-# Visual Design System: Curaval Castle
+# Design System: Curaval Castle Enterprise Platform
 
-## 1. Design Direction
-- Aesthetic: Deep enterprise luxury medical fortress, dark glassmorphism, subtle micro-glows, non-traditional asymmetrical bento grid.
-- Inspirations: Linear.app, Godly.website, 21st.dev interactive components.
-- Avoid: Generic centered 3-card layouts, neon purple gradients, boilerplate AI slop templates.
+## 1. Visual Aesthetics & Philosophy (Inspired by Godly / 21st.dev / Linear)
+- Dark-first aesthetic with deep obsidian tones (#04070B, #0A0F18).
+- Avoid standard 3-card equal column layouts; use **Asymmetric Bento Grids** with varying spans (col-span-8, col-span-4).
+- Ambient interactive background: Dark mesh gradient / WebGL shader combined with the local looping video asset (low opacity 0.35 with backdrop-blur overlay).
+- Micro-interactions: Cards feature cursor-following radial border highlights, subtle 3D tilt, and soft elevation on hover.
 
-## 2. Color Palette & Tokens
-- Background Base: #06090e (Deep Void Slate)
-- Background Elevated (Cards): rgba(13, 20, 32, 0.65) with backdrop-blur-xl and border-white/10
-- Accent Primary: #0ea5e9 (Cyan Logistics Glow)
-- Accent Medical: #10b981 (Pharma Emerald)
-- Text Primary: #f8fafc
-- Text Muted: #94a3b8
+## 2. Color Palette & Lighting
+- Base Void: `#04070D`
+- Card Surfaces: `rgba(10, 16, 26, 0.75)` with `backdrop-blur-xl` and border `rgba(255, 255, 255, 0.08)`
+- Primary Accent: `#00E5FF` (Neon Medical Cyan)
+- Secondary Accent: `#10B981` (Pharma Emerald)
+- Muted Text: `#8E9AA8`
+- Heading Text: `#F1F5F9`
 
-## 3. Typography & Icons
-- Arabic Font: Cairo / Tajawal (weights: 500, 700, 900)
-- English Font: Plus Jakarta Sans / Inter
-- Icon Engine: Phosphor Icons exclusively (`@phosphor-icons/web` or React Phosphor).
-
-## 4. Interaction & Motion Rules
-- Hero Section: WebGL subtle noise/fluid shader canvas behind typography or low-opacity looping local video.
-- Navigation: Floating liquid glass pill navbar with fluid expansion on scroll.
-- Cards: Bento-grid asymmetry, dynamic mouse-following border gradient, smooth 3D tilt.
+## 3. Component Architecture
+- **Navbar:** Floating liquid pill navbar fixed at top, glassmorphic (`backdrop-blur-md`), shrinking on scroll. Contains brand logo, language toggle (AR/EN), theme toggle, and CTA.
+- **Hero:** Deep typography, floating pill status badge with pulsing green light ("24/7 Nationwide Cold Chain Active"), live number counters, and dual CTAs.
+- **Bento Showcase (Services & Capabilities):**
+  - Card 1 (Large - 8 cols): Cold Chain with live animated temperature display simulator (`3.4°C Optimal`).
+  - Card 2 (4 cols): Satellite Fleet Telemetry with animated GPS pulse.
+  - Card 3 (4 cols): Smart Warehouse Storage capacity indicator.
+  - Card 4 (8 cols): Interactive Governorate distribution map/zones.
+- **Form Component:** Clean floating glass inputs, field focus rings in Cyan, and real-time validation.
+- **Icons:** Phosphor Icons only (use duotone weight `ph-duotone` for a modern tech feel).
